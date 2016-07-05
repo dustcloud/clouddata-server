@@ -1,0 +1,11 @@
+# DDL
+
+CREATE DATABASE grafana
+CREATE RETENTION POLICY twelve_h_only ON grafana DURATION 12h REPLICATION 1 DEFAULT
+
+# DML
+# CONTEXT-DATABASE: grafana 
+# CONTEXT-RETENTION-POLICY: twelve_h_only 
+
+temperature,mac=11-11-11-11-11-11-11-11 value=29
+temperature,mac=22-22-22-22-22-22-22-22 value=21
